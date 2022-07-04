@@ -12,19 +12,19 @@ import "math"
 
 type sidesNum int
 
-const TRIANGLE = 3
-const SQUARE = 4
-const CIRCLE = 0
+const SidesTriangle = 3
+const SidesSquare = 4
+const SidesCircle = 0
 
 func CalcSquare(sideLen float64, sidesNum sidesNum) float64 {
 	var square float64
 
 	switch sidesNum {
-	case TRIANGLE:
-		square = TRIANGLE * sideLen
-	case SQUARE:
-		square = SQUARE * sideLen
-	case CIRCLE:
+	case SidesTriangle:
+		square = SidesTriangle * sideLen
+	case SidesSquare:
+		square = SidesSquare * sideLen
+	case SidesCircle:
 		square = math.Pi * math.Pow(sideLen, 2)
 	default:
 		square = 0
